@@ -55,12 +55,12 @@ const CONTENT = {
     heroSub:
       "Recruit permanent staff, book available freelancers and manage your regular crew.",
     slides: [
-      { src: "c-home-v3.png", alt: "Employer dashboard", caption: "Dashboard" },
-      { src: "c-staff.png", alt: "Staff portal", caption: "Staff Portal" },
-      { src: "c-calendar.png", alt: "Employer calendar", caption: "Employer Calendar" },
-      { src: "c-discover.png", alt: "Discover talent", caption: "Freelancer & Employee Discovery" },
-      { src: "c-permanent.png", alt: "Permanent roles", caption: "Full/Part Time Roles" },
-      { src: "c-freelance.png", alt: "Freelance roles", caption: "Freelance Roles" },
+      { src: "c-home-v3.webp", alt: "Employer dashboard", caption: "Dashboard" },
+      { src: "c-staff.webp", alt: "Staff portal", caption: "Staff Portal" },
+      { src: "c-calendar.webp", alt: "Employer calendar", caption: "Employer Calendar" },
+      { src: "c-discover.webp", alt: "Discover talent", caption: "Freelancer & Employee Discovery" },
+      { src: "c-permanent.webp", alt: "Permanent roles", caption: "Full/Part Time Roles" },
+      { src: "c-freelance.webp", alt: "Freelance roles", caption: "Freelance Roles" },
     ],
     painLead:
       "Been let down and now ringing round for a replacement? Trust and word of mouth only work if the right person happens to be free.",
@@ -131,10 +131,10 @@ const CONTENT = {
     heroSub:
       "Build your profile, showcase your talent and apply for freelance or permanent roles in seconds.",
     slides: [
-      { src: "c-con-home2.png", alt: "Freelancer home", caption: "Your Dashboard" },
-      { src: "c-con-freelance.png", alt: "Freelancer freelance jobs", caption: "Freelance Jobs" },
-      { src: "c-con-permanent.png", alt: "Freelancer permanent roles", caption: "Full/Part Time Roles" },
-      { src: "c-con-teams-nb.png", alt: "Freelancer my teams", caption: "My Teams" },
+      { src: "c-con-home2.webp", alt: "Freelancer home", caption: "Your Dashboard" },
+      { src: "c-con-freelance.webp", alt: "Freelancer freelance jobs", caption: "Freelance Jobs" },
+      { src: "c-con-permanent.webp", alt: "Freelancer permanent roles", caption: "Full/Part Time Roles" },
+      { src: "c-con-teams-nb.webp", alt: "Freelancer my teams", caption: "My Teams" },
     ],
     painLead:
       "You know you can do the job. But without the network, opportunities go missed and dates sit empty.",
