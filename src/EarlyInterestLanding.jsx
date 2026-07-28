@@ -392,7 +392,7 @@ export default function EarlyInterestLanding() {
               <span style={{ color: theme.bannerAccent, display: "inline-flex" }}>
                 <Gift size={14} strokeWidth={2.1} />
               </span>
-              Register interest now <span style={{ color: theme.bannerAccent }}>·</span> get your first month free
+              Register interest
             </span>
           ))}
         </div>
