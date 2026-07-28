@@ -915,8 +915,8 @@ export default function EarlyInterestLanding() {
                     letterSpacing: "-0.01em",
                   }}
                 >
-                  Launch promo: register now and get your{" "}
-                  <span style={{ color: theme.promoIcon }}>first month free</span>.
+                  Founding {isEmp ? "employers" : "members"}: register now and get your{" "}
+                  <span style={{ color: theme.promoIcon }}>first month free</span>. Limited early spots.
                 </span>
               </div>
             </div>
@@ -1384,6 +1384,28 @@ export default function EarlyInterestLanding() {
                 </span>
                 <span style={{ fontSize: "0.8rem", color: "#6b7280" }}>{p.per}</span>
               </div>
+              {p.pop && (
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 7,
+                    padding: "9px 11px",
+                    marginBottom: 16,
+                    borderRadius: 10,
+                    background: theme.accentSoft,
+                    border: `1px solid ${theme.accentBorder}`,
+                    color: p.color,
+                    fontSize: "0.72rem",
+                    fontWeight: 800,
+                    letterSpacing: "-0.01em",
+                    lineHeight: 1.3,
+                  }}
+                >
+                  <Gift size={14} strokeWidth={2.2} style={{ flexShrink: 0 }} />
+                  Founding offer — first month free
+                </div>
+              )}
               <div
                 style={{
                   borderTop: "1px solid rgba(0,0,0,0.05)",
