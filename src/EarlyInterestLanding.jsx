@@ -211,7 +211,6 @@ export default function EarlyInterestLanding() {
   const [rolesOpen, setRolesOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
-  const [privacyOpen, setPrivacyOpen] = useState(false);
   const dragRef = useRef(null);
 
   const isEmp = mode === "employer";
@@ -1323,9 +1322,8 @@ export default function EarlyInterestLanding() {
               color: "#0f1710",
             }}
           >
-            Connecting the paddock
+            Clear, honest pricing
           </h2>
-          <p style={{ color: "#4b5563", fontSize: "0.9rem" }}>No setup fees. No hidden costs. Cancel anytime.</p>
         </div>
         <div style={{ maxWidth: 520, margin: "0 auto" }}>
           <div
@@ -1571,106 +1569,18 @@ export default function EarlyInterestLanding() {
             >
               Instagram · @motorsportconnector
             </a>
-            <button
-              type="button"
-              onClick={() => setPrivacyOpen(true)}
-              style={{
-                background: "none",
-                border: "none",
-                padding: 0,
-                cursor: "pointer",
-                color: theme.accent,
-                fontSize: "0.82rem",
-                fontWeight: 600,
-                fontFamily: "inherit",
-              }}
+            <a
+              href="/privacy.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: theme.accent, fontSize: "0.82rem", fontWeight: 600 }}
             >
               Privacy Notice
-            </button>
+            </a>
           </div>
           <span style={{ fontSize: "0.76rem", color: "#6b7280" }}>© 2026 Motorsport Connector Ltd · Built for the paddock.</span>
         </div>
       </footer>
-
-      {privacyOpen && (
-        <div
-          onClick={() => setPrivacyOpen(false)}
-          style={{
-            position: "fixed",
-            inset: 0,
-            zIndex: 9998,
-            background: "rgba(15,23,16,0.55)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: 20,
-          }}
-        >
-          <div
-            onClick={(e) => e.stopPropagation()}
-            role="dialog"
-            aria-label="Privacy Notice"
-            style={{
-              background: "#fff",
-              borderRadius: 18,
-              maxWidth: 620,
-              width: "100%",
-              maxHeight: "85vh",
-              overflowY: "auto",
-              padding: "28px 30px",
-              boxShadow: "0 30px 80px -20px rgba(15,23,16,0.5)",
-            }}
-          >
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 6 }}>
-              <h2 style={{ fontSize: "1.3rem", fontWeight: 900, color: "#0f1710", margin: 0, letterSpacing: "-0.02em" }}>
-                Privacy Notice
-              </h2>
-              <button
-                type="button"
-                onClick={() => setPrivacyOpen(false)}
-                aria-label="Close"
-                style={{ background: "none", border: "none", cursor: "pointer", color: "#6b7280", display: "inline-flex" }}
-              >
-                <X size={22} strokeWidth={2} />
-              </button>
-            </div>
-            <p style={{ fontSize: "0.78rem", color: "#9ca3af", margin: "0 0 18px" }}>Last updated: July 2026</p>
-            {[
-              ["Who we are", "This site is operated by Motorsport Connector Ltd (“we”, “us”). You can contact us at motorsportconnector@gmail.com."],
-              ["What we collect", "When you register your interest we collect your email address and the role/audience you select. We do not ask for any other personal information on this page — please don’t enter more than is requested."],
-              ["Why we use it", "We use your details only to contact you about the launch of Motorsport Connector and your early-access / founding-member offer. We do not use them for unrelated marketing."],
-              ["Lawful basis", "We process your details on the basis of your consent, given when you submit the registration form. You can withdraw consent at any time by emailing us."],
-              ["Who we share it with", "Your submission is handled by our form provider (Web3Forms) purely to deliver it to us, and stored so we can manage the early-interest list. We never sell your data or share it with third parties for their own marketing."],
-              ["How long we keep it", "We keep your details until launch and for a reasonable period afterwards to provide the service, or until you ask us to delete them — whichever comes first."],
-              ["Your rights", "You have the right to access, correct or delete your data, and to object to or restrict its use. To exercise any of these, email motorsportconnector@gmail.com and we’ll respond promptly. You may also complain to the UK Information Commissioner’s Office (ico.org.uk)."],
-              ["Cookies", "This site uses only essential storage to remember your cookie choice. We do not use tracking or advertising cookies. Anonymous, privacy-friendly analytics may be used to count visits."],
-            ].map(([h, body]) => (
-              <div key={h} style={{ marginBottom: 14 }}>
-                <div style={{ fontSize: "0.9rem", fontWeight: 800, color: "#0f1710", marginBottom: 4 }}>{h}</div>
-                <p style={{ fontSize: "0.85rem", color: "#4b5563", lineHeight: 1.6, margin: 0 }}>{body}</p>
-              </div>
-            ))}
-            <button
-              type="button"
-              onClick={() => setPrivacyOpen(false)}
-              style={{
-                marginTop: 10,
-                width: "100%",
-                padding: 13,
-                borderRadius: 11,
-                border: "none",
-                background: theme.accent,
-                color: "#fff",
-                fontSize: "0.9rem",
-                fontWeight: 800,
-                cursor: "pointer",
-              }}
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
