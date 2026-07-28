@@ -558,7 +558,7 @@ export default function EarlyInterestLanding() {
           </button>
           <button onClick={() => switchMode("contractor")} style={{ ...tabBase, ...(!isEmp ? selStyle : offStyle) }}>
             <User size={13} strokeWidth={2} />
-            Contractor / Employee
+            I'm a Contractor/Employee
           </button>
         </div>
       </section>
