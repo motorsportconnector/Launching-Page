@@ -113,7 +113,7 @@ const CONTENT = {
     ],
     faqSub: "For employers.",
     faqs: [
-      { q: "What does it cost to post a role?", a: "The Free plan includes one freelance post a month, with full and part time listings available pay per post. Pro (£49.99/mo) unlocks unlimited freelance posts, the Staff Portal and the Employer Calendar." },
+      { q: "What does it cost to post a role?", a: "Pricing will be tier based, with a free tier to get started and paid tiers unlocking unlimited freelance posts, the Staff Portal and the Employer Calendar. Full pricing will be announced soon — register your interest to be the first to know." },
       { q: "How quickly can I fill a gap?", a: "Post a role in under a minute and see who is available before you ask. Send direct offers to contractors and employees you have worked with before straight from the Staff Portal." },
       { q: "I'm the parent of a driver - can I use this?", a: "Absolutely. Anyone can search the network and book the right person directly, whether you are a team, a business or a parent supporting a young driver." },
       { q: "Do you take commission on bookings?", a: "No. Pay is agreed and handled directly between you and the contractor or employee. We never take a cut." },
@@ -187,7 +187,7 @@ const CONTENT = {
     ],
     faqSub: "For contractors and employees.",
     faqs: [
-      { q: "What does it cost to join?", a: "It is free to build a profile and apply to one full or part time role. Pro (£14.99/mo) unlocks unlimited applications and the full freelance marketplace." },
+      { q: "What does it cost to join?", a: "Pricing will be tier based, with a free tier to build a profile and apply, and paid tiers unlocking unlimited applications and the full freelance marketplace. Full pricing will be announced soon — register your interest to be the first to know." },
       { q: "How do employers find me?", a: "Your profile holds your CV, experience and live availability, so employers can find you and send direct offers before a role is even advertised." },
       { q: "What kind of work is on here?", a: "Both freelance race-weekend contracts and permanent full and part time roles, across every area of motorsport." },
       { q: "Do you take a cut of what I earn?", a: "No. Your pay is agreed directly with the employer. We never take a cut." },
@@ -392,7 +392,7 @@ export default function EarlyInterestLanding() {
               <span style={{ color: theme.bannerAccent, display: "inline-flex" }}>
                 <Gift size={14} strokeWidth={2.1} />
               </span>
-              Register interest
+              Founding members — register your interest now and get your first month free. Limited early spots.
             </span>
           ))}
         </div>
@@ -915,7 +915,7 @@ export default function EarlyInterestLanding() {
                     letterSpacing: "-0.01em",
                   }}
                 >
-                  Founding {isEmp ? "employers" : "members"}: register now and get your{" "}
+                  Founding members — register your interest now and get your{" "}
                   <span style={{ color: theme.promoIcon }}>first month free</span>. Limited early spots.
                 </span>
               </div>
@@ -1322,15 +1322,38 @@ export default function EarlyInterestLanding() {
               color: "#0f1710",
             }}
           >
-            Simple, transparent pricing
+            Pricing built for the paddock
           </h2>
           <p style={{ color: "#4b5563", fontSize: "0.9rem" }}>No setup fees. No hidden costs. Cancel anytime.</p>
         </div>
-        <div
-          className="mc-price-grid"
-          style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 14, maxWidth: 620, margin: "0 auto" }}
-        >
-          {c.pricing.map((p) => (
+        <div style={{ maxWidth: 520, margin: "0 auto" }}>
+          <div
+            style={{
+              padding: "36px 28px",
+              borderRadius: 20,
+              background: theme.accentSoft,
+              border: `1px solid ${theme.accentBorder}`,
+              textAlign: "center",
+              transition: "background 0.4s ease, border-color 0.4s ease",
+            }}
+          >
+            <div style={{ color: theme.accent, display: "inline-flex", marginBottom: 12 }}>
+              <Gift size={26} strokeWidth={2} />
+            </div>
+            <p
+              style={{
+                fontSize: "1.05rem",
+                fontWeight: 800,
+                color: "#0f1710",
+                margin: 0,
+                lineHeight: 1.5,
+                letterSpacing: "-0.01em",
+              }}
+            >
+              Pricing will be tier based. We will be announcing prices soon!
+            </p>
+          </div>
+          {false && c.pricing.map((p) => (
             <div
               key={p.tier}
               style={{
