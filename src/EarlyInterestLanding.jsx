@@ -113,7 +113,7 @@ const CONTENT = {
     ],
     faqSub: "For employers.",
     faqs: [
-      { q: "What does it cost to post a role?", a: "Pricing will be tier based, with a free tier to get started and paid tiers unlocking unlimited freelance posts, the Staff Portal and the Employer Calendar. Full pricing will be announced soon — register your interest to be the first to know." },
+      { q: "What does it cost to post a role?", a: "Pricing will be tier based, with a free tier and paid tiers. Full pricing will be announced soon — register your interest now to be the first to know." },
       { q: "How quickly can I fill a gap?", a: "Post a role in under a minute and see who is available before you ask. Send direct offers to freelancers and employees you have worked with before straight from the Staff Portal." },
       { q: "I'm the parent of a driver - can I use this?", a: "Absolutely. Anyone can search the network and book the right person directly, whether you are a team, a business or a parent supporting a young driver." },
       { q: "Do you take commission on bookings?", a: "No. Pay is agreed and handled directly between you and the freelancer or employee. We never take a cut." },
@@ -187,8 +187,8 @@ const CONTENT = {
     ],
     faqSub: "For freelancers and employees.",
     faqs: [
-      { q: "What does it cost to join?", a: "Pricing will be tier based, with a free tier to build a profile and apply, and paid tiers unlocking unlimited applications and the full freelance marketplace. Full pricing will be announced soon — register your interest to be the first to know." },
-      { q: "How do employers find me?", a: "Your profile holds your CV, experience and live availability, so employers can find you and send direct offers before a role is even advertised." },
+      { q: "What does it cost to join?", a: "Pricing will be tier based, with a free tier and paid tiers. Full pricing will be announced soon — register your interest now to be the first to know." },
+      { q: "How do employers find me?", a: "Your profile holds your CV, experience and live availability, so employers can find you and send direct offers before a role is even advertised. You can also apply to unlimited jobs to widen your network." },
       { q: "What kind of work is on here?", a: "Both freelance race-weekend contracts and permanent full and part time roles, across every area of motorsport." },
       { q: "Do you take a cut of what I earn?", a: "No. Your pay is agreed directly with the employer. We never take a cut." },
     ],
