@@ -144,7 +144,7 @@ const CONTENT = {
       "Nowhere to showcase your availability and experience",
       "Old fashioned job boards full of expired listings",
     ],
-    painClose: "One profile, built for motorsport, working for you all season.",
+    painClose: "One profile, tailored to your role in motorsport, helping to widen your network and bring more opportunities throughout the season.",
     pillIcon: User,
     pillLabel: "For freelancers & employees",
     pillText: "Build a profile, stay visible and apply in seconds",
@@ -1192,12 +1192,13 @@ export default function EarlyInterestLanding() {
                     width: 20,
                     height: 20,
                     borderRadius: "50%",
-                    background: "#f3f4f6",
-                    color: "#9ca3af",
+                    background: theme.accentSoft,
+                    color: theme.accent,
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     marginTop: 1,
+                    transition: "background 0.3s ease, color 0.3s ease",
                   }}
                 >
                   <X size={11} strokeWidth={2.8} />
