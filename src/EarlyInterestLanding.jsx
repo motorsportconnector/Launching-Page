@@ -19,10 +19,10 @@ import {
   X,
 } from "lucide-react";
 
-// Web3Forms access key from the design prototype. Registrations are emailed here.
+// Web3Forms access key. Registrations are emailed here.
 const WEB3FORMS_ACCESS_KEY = "f2f2230b-4a2f-4ace-a1cf-af842d66df42";
 
-// --- colour helpers (ported from the design prototype) ---------------------
+// --- colour helpers ---------------------------------------------------------
 const hexRgb = (h) => {
   const n = parseInt(h.slice(1), 16);
   return `${(n >> 16) & 255},${(n >> 8) & 255},${n & 255}`;
