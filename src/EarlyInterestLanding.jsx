@@ -53,12 +53,12 @@ const CONTENT = {
   employer: {
     accent: "#0b5d4f",
     heroSub:
-      "Recruit permanent staff, book available contractors and manage your regular crew.",
+      "Recruit permanent staff, book available freelancers and manage your regular crew.",
     slides: [
       { src: "c-home-v3.png", alt: "Employer dashboard", caption: "Dashboard" },
       { src: "c-staff.png", alt: "Staff portal", caption: "Staff Portal" },
       { src: "c-calendar.png", alt: "Employer calendar", caption: "Employer Calendar" },
-      { src: "c-discover.png", alt: "Discover talent", caption: "Contractor & Employee Discovery" },
+      { src: "c-discover.png", alt: "Discover talent", caption: "Freelancer & Employee Discovery" },
       { src: "c-permanent.png", alt: "Permanent roles", caption: "Full/Part Time Roles" },
       { src: "c-freelance.png", alt: "Freelance roles", caption: "Freelance Roles" },
     ],
@@ -78,7 +78,7 @@ const CONTENT = {
       { Icon: PlusCircle, title: "Post in 60 Seconds", desc: "Freelance and Full/Part Time roles live in under a minute." },
       { Icon: Users, title: "Staff Portal", desc: "Your pre-existing network all in one place. View their availability and send direct offers." },
       { Icon: Calendar, title: "Employer Calendar", desc: "Event planning made simple. Publish your schedule for your whole network to see." },
-      { Icon: Search, title: "Contractor & Employee Discovery", desc: "Browse the full network. Filter by role, location, availability." },
+      { Icon: Search, title: "Freelancer & Employee Discovery", desc: "Browse the full network. Filter by role, location, availability." },
     ],
     pricing: [
       {
@@ -91,7 +91,7 @@ const CONTENT = {
           "1 Freelance Job Post/Month",
           "Full/Part Time Listings (Pay per Post)",
           "Direct Messaging",
-          "Contractor & Employee Availability View",
+          "Freelancer & Employee Availability View",
         ],
       },
       {
@@ -106,17 +106,17 @@ const CONTENT = {
           "1 Standard Full/Part Time Listing per 6 Months",
           "Staff Portal & Roster",
           "Employer Calendar",
-          "AI Contractor & Employee Matching",
-          "Full Contractor & Employee Discovery",
+          "AI Freelancer & Employee Matching",
+          "Full Freelancer & Employee Discovery",
         ],
       },
     ],
     faqSub: "For employers.",
     faqs: [
       { q: "What does it cost to post a role?", a: "Pricing will be tier based, with a free tier to get started and paid tiers unlocking unlimited freelance posts, the Staff Portal and the Employer Calendar. Full pricing will be announced soon — register your interest to be the first to know." },
-      { q: "How quickly can I fill a gap?", a: "Post a role in under a minute and see who is available before you ask. Send direct offers to contractors and employees you have worked with before straight from the Staff Portal." },
+      { q: "How quickly can I fill a gap?", a: "Post a role in under a minute and see who is available before you ask. Send direct offers to freelancers and employees you have worked with before straight from the Staff Portal." },
       { q: "I'm the parent of a driver - can I use this?", a: "Absolutely. Anyone can search the network and book the right person directly, whether you are a team, a business or a parent supporting a young driver." },
-      { q: "Do you take commission on bookings?", a: "No. Pay is agreed and handled directly between you and the contractor or employee. We never take a cut." },
+      { q: "Do you take commission on bookings?", a: "No. Pay is agreed and handled directly between you and the freelancer or employee. We never take a cut." },
     ],
     roles: [
       "Race Team", "Karting Team", "Manufacturer", "Team Owner / Principal", "Parts / Equipment Supplier",
@@ -131,10 +131,10 @@ const CONTENT = {
     heroSub:
       "Build your profile, showcase your talent and apply for freelance or permanent roles in seconds.",
     slides: [
-      { src: "c-con-home2.png", alt: "Contractor home", caption: "Your Dashboard" },
-      { src: "c-con-freelance.png", alt: "Contractor freelance jobs", caption: "Freelance Jobs" },
-      { src: "c-con-permanent.png", alt: "Contractor permanent roles", caption: "Full/Part Time Roles" },
-      { src: "c-con-teams-nb.png", alt: "Contractor my teams", caption: "My Teams" },
+      { src: "c-con-home2.png", alt: "Freelancer home", caption: "Your Dashboard" },
+      { src: "c-con-freelance.png", alt: "Freelancer freelance jobs", caption: "Freelance Jobs" },
+      { src: "c-con-permanent.png", alt: "Freelancer permanent roles", caption: "Full/Part Time Roles" },
+      { src: "c-con-teams-nb.png", alt: "Freelancer my teams", caption: "My Teams" },
     ],
     painLead:
       "You know you can do the job. But without the network, opportunities go missed and dates sit empty.",
@@ -146,7 +146,7 @@ const CONTENT = {
     ],
     painClose: "One profile, built for motorsport, working for you all season.",
     pillIcon: User,
-    pillLabel: "For contractors & employees",
+    pillLabel: "For freelancers & employees",
     pillText: "Build a profile, stay visible and apply in seconds",
     cards: [
       { Icon: FileText, title: "Create Your Profile", desc: "Your CV, experience and availability held in one profile that works for every application." },
@@ -174,7 +174,7 @@ const CONTENT = {
         per: "/mo",
         color: "#7c3aed",
         pop: true,
-        popLabel: "Contractors pick this",
+        popLabel: "Freelancers pick this",
         features: [
           "Access to All Features and Marketplaces",
           "Unlimited Full/Part Time Applications",
@@ -185,7 +185,7 @@ const CONTENT = {
         ],
       },
     ],
-    faqSub: "For contractors and employees.",
+    faqSub: "For freelancers and employees.",
     faqs: [
       { q: "What does it cost to join?", a: "Pricing will be tier based, with a free tier to build a profile and apply, and paid tiers unlocking unlimited applications and the full freelance marketplace. Full pricing will be announced soon — register your interest to be the first to know." },
       { q: "How do employers find me?", a: "Your profile holds your CV, experience and live availability, so employers can find you and send direct offers before a role is even advertised." },
@@ -302,7 +302,7 @@ export default function EarlyInterestLanding() {
         role,
         message:
           "New registration\nType: " +
-          (mode === "employer" ? "Employer" : "Contractor / Employee") +
+          (mode === "employer" ? "Employer" : "Freelancer / Employee") +
           "\nEmail: " +
           cleanEmail +
           "\nRole: " +
@@ -472,20 +472,6 @@ export default function EarlyInterestLanding() {
               alt="Motorsport Connector"
               style={{ height: 28, objectFit: "contain", display: "block", flexShrink: 0 }}
             />
-            <span
-              className="mc-nav-tag"
-              style={{
-                fontSize: "0.74rem",
-                fontWeight: 600,
-                color: "#6b7280",
-                letterSpacing: "0.01em",
-                paddingLeft: 14,
-                borderLeft: "1px solid #e5e7eb",
-                whiteSpace: "nowrap",
-              }}
-            >
-              The workforce platform for motorsport
-            </span>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0 }}>
             <a href="#glimpse" className="mc-nav-link" style={navLink}>
@@ -558,7 +544,7 @@ export default function EarlyInterestLanding() {
           </button>
           <button onClick={() => switchMode("contractor")} style={{ ...tabBase, ...(!isEmp ? selStyle : offStyle) }}>
             <User size={13} strokeWidth={2} />
-            I'm a Contractor/Employee
+            I'm a Freelancer/Employee
           </button>
         </div>
       </section>
@@ -736,7 +722,7 @@ export default function EarlyInterestLanding() {
                   onClick={() => switchMode("contractor")}
                   style={{ ...tabBaseSm, ...(!isEmp ? selStyle : offStyle) }}
                 >
-                  Contractor / employee
+                  Freelancer / employee
                 </button>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 11 }}>
@@ -1397,7 +1383,7 @@ export default function EarlyInterestLanding() {
                   marginBottom: 3,
                 }}
               >
-                {isEmp ? "Employer" : "Contractor / Employee"}
+                {isEmp ? "Employer" : "Freelancer / Employee"}
               </div>
               <div style={{ fontWeight: 900, fontSize: "1rem", color: "#0f1710", marginBottom: 8 }}>{p.tier}</div>
               <div style={{ display: "flex", alignItems: "baseline", gap: 2, marginBottom: 18 }}>
