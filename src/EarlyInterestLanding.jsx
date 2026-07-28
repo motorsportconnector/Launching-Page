@@ -70,7 +70,7 @@ const CONTENT = {
       "No single record of who you have worked with, and who was good",
       "Adverts lost amongst overpriced job boards",
     ],
-    painClose: "One platform, built for motorsport, with everything in one place.",
+    painClose: "One profile, tailored to your team or business, helping you widen your network and bring better quality work throughout the season.",
     pillIcon: Building2,
     pillLabel: "For employers",
     pillText: "Post roles, find crew and manage your team",
