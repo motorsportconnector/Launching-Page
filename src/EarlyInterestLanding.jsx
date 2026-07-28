@@ -207,6 +207,7 @@ export default function EarlyInterestLanding() {
   const [mode, setMode] = useState("employer");
   const [slide, setSlide] = useState(0);
   const [email, setEmail] = useState("");
+  const [hp, setHp] = useState(""); // honeypot: hidden field only bots fill
   const [role, setRole] = useState("");
   const [rolesOpen, setRolesOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -275,6 +276,11 @@ export default function EarlyInterestLanding() {
   const ready = valid && !!role;
 
   const submit = useCallback(() => {
+    if (hp) {
+      // Honeypot filled → almost certainly a bot. Show success, send nothing.
+      setSubmitted(true);
+      return;
+    }
     if (!email.trim() || !EMAIL_RE.test(email.trim())) {
       setError("Please enter a valid email address.");
       return;
@@ -300,6 +306,7 @@ export default function EarlyInterestLanding() {
         from_name: "Motorsport Connector",
         email: cleanEmail,
         role,
+        botcheck: "", // Web3Forms native spam field (empty for humans)
         message:
           "New registration\nType: " +
           (mode === "employer" ? "Employer" : "Freelancer / Employee") +
@@ -311,7 +318,7 @@ export default function EarlyInterestLanding() {
     }).catch(() => {});
     setSubmitted(true);
     setError("");
-  }, [email, role, mode]);
+  }, [email, role, mode, hp]);
 
   // shared inline style fragments
   const tabBase = {
@@ -740,6 +747,17 @@ export default function EarlyInterestLanding() {
                 </button>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 11 }}>
+                {/* Honeypot — hidden from users, bots auto-fill it → submission is dropped */}
+                <input
+                  type="text"
+                  name="company"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  value={hp}
+                  onChange={(e) => setHp(e.target.value)}
+                  style={{ position: "absolute", left: "-9999px", top: 0, width: 1, height: 1, opacity: 0 }}
+                />
                 <input
                   type="email"
                   aria-label="Your email address"
