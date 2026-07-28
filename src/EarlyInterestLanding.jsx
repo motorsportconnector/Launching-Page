@@ -472,6 +472,20 @@ export default function EarlyInterestLanding() {
               alt="Motorsport Connector"
               style={{ height: 28, objectFit: "contain", display: "block", flexShrink: 0 }}
             />
+            <span
+              className="mc-nav-tag"
+              style={{
+                fontSize: "0.74rem",
+                fontWeight: 600,
+                color: "#6b7280",
+                letterSpacing: "0.01em",
+                paddingLeft: 14,
+                borderLeft: "1px solid #e5e7eb",
+                whiteSpace: "nowrap",
+              }}
+            >
+              Connecting the paddock
+            </span>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0 }}>
             <a href="#glimpse" className="mc-nav-link" style={navLink}>
@@ -1564,7 +1578,7 @@ export default function EarlyInterestLanding() {
               Privacy Notice
             </a>
           </div>
-          <span style={{ fontSize: "0.76rem", color: "#6b7280" }}>© 2026 Motorsport Connector Ltd · Built for the paddock.</span>
+          <span style={{ fontSize: "0.76rem", color: "#6b7280" }}>© 2026 Motorsport Connector Ltd</span>
         </div>
       </footer>
     </div>
