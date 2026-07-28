@@ -189,7 +189,7 @@ const CONTENT = {
     faqs: [
       { q: "What does it cost to join?", a: "Pricing will be tier based, with a free tier and paid tiers. Full pricing will be announced soon — register your interest now to be the first to know." },
       { q: "How do employers find me?", a: "Your profile holds your CV, experience and live availability, so employers can find you and send direct offers before a role is even advertised. You can also apply to unlimited jobs to widen your network." },
-      { q: "What kind of work is on here?", a: "Both freelance race-weekend contracts and permanent full and part time roles, across every area of motorsport." },
+      { q: "What kind of work is on here?", a: "There is a freelance marketplace for one-off jobs or race weekend contracts, alongside the permanent jobs marketplace where you can find full / part time jobs, both featuring roles across every area of motorsport." },
       { q: "Do you take a cut of what I earn?", a: "No. Your pay is agreed directly with the employer. We never take a cut." },
     ],
     roles: [
