@@ -114,7 +114,7 @@ const CONTENT = {
     faqSub: "For employers.",
     faqs: [
       { q: "What does it cost to post a role?", a: "Pricing will be tier based, with a free tier and paid tiers. Full pricing will be announced soon — register your interest now to be the first to know." },
-      { q: "How quickly can I fill a gap?", a: "Post a role in under a minute and see who is available before you ask. Send direct offers to freelancers and employees you have worked with before straight from the Staff Portal." },
+      { q: "How quickly can I fill a gap?", a: "Post a job within 60 seconds and receive applications from available freelancers. You can also send direct offers to freelancers you've previously hired and to your pre-existing team through your custom Staff Portal, where you can manage your crew." },
       { q: "I'm the parent of a driver - can I use this?", a: "Absolutely. Anyone can search the network and book the right person directly, whether you are a team, a business or a parent supporting a young driver." },
       { q: "Do you take commission on bookings?", a: "No. Pay is agreed and handled directly between you and the freelancer or employee. We never take a cut." },
     ],
