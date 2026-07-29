@@ -15,6 +15,7 @@ import {
   MessageSquare,
   PlusCircle,
   Search,
+  Tag,
   User,
   Users,
   X,
@@ -1485,6 +1486,9 @@ export default function EarlyInterestLanding() {
               transition: "background 0.4s ease, border-color 0.4s ease",
             }}
           >
+            <div style={{ color: theme.accent, display: "inline-flex", marginBottom: 12 }}>
+              <Tag size={26} strokeWidth={2} />
+            </div>
             <p
               style={{
                 fontSize: "1.05rem",
