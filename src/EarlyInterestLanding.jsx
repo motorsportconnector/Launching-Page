@@ -986,6 +986,94 @@ export default function EarlyInterestLanding() {
         </div>
       </section>
 
+      {/* FEATURES */}
+      <section style={{ position: "relative", zIndex: 10, maxWidth: 1200, margin: "0 auto", padding: "64px 24px" }}>
+        <div style={{ textAlign: "center", marginBottom: 40 }}>
+          <div
+            style={{
+              fontSize: "0.65rem",
+              fontWeight: 800,
+              textTransform: "uppercase",
+              letterSpacing: "0.18em",
+              color: theme.accent,
+              marginBottom: 6,
+              transition: "color 0.3s ease",
+            }}
+          >
+            Platform
+          </div>
+          <h2
+            style={{
+              fontSize: "clamp(2.1rem, 4.3vw, 3.1rem)",
+              fontWeight: 900,
+              letterSpacing: "-0.032em",
+              margin: "8px 0 12px",
+              color: "#0f1710",
+            }}
+          >
+            Everything you need
+          </h2>
+          <p style={{ color: "#4b5563", fontSize: "0.9rem", maxWidth: 420, margin: "0 auto", lineHeight: 1.7 }}>
+            Tailored for the paddock.
+          </p>
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
+          <span
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 7,
+              fontSize: "0.62rem",
+              fontWeight: 800,
+              borderRadius: 999,
+              padding: "5px 13px",
+              background: theme.accentSoft,
+              color: theme.accent,
+              border: `1px solid ${theme.accentBorder}`,
+              letterSpacing: "0.08em",
+              textTransform: "uppercase",
+              whiteSpace: "nowrap",
+            }}
+          >
+            <PillIcon size={11} strokeWidth={2} />
+            {c.pillLabel}
+          </span>
+          <span style={{ fontSize: "0.82rem", color: "#4b5563" }}>{c.pillText}</span>
+          <div style={{ flex: 1, minWidth: 40, height: 1, background: "rgba(0,0,0,0.06)" }} />
+        </div>
+        <div className="mc-feat-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 12 }}>
+          {c.cards.map(({ Icon, title, desc }) => (
+            <div
+              key={title}
+              style={{
+                padding: 22,
+                borderRadius: 16,
+                background: "rgba(0,0,0,0.02)",
+                border: "1px solid rgba(0,0,0,0.06)",
+              }}
+            >
+              <div
+                style={{
+                  width: 40,
+                  height: 40,
+                  borderRadius: 10,
+                  background: theme.accentSoft,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginBottom: 14,
+                  color: theme.accent,
+                }}
+              >
+                <Icon size={19} strokeWidth={1.7} />
+              </div>
+              <div style={{ fontWeight: 800, fontSize: "0.85rem", color: "#0f1710", marginBottom: 5 }}>{title}</div>
+              <p style={{ fontSize: "0.77rem", color: "#4b5563", lineHeight: 1.65, margin: 0 }}>{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* CAROUSEL */}
       <section
         id="glimpse"
@@ -1358,94 +1446,6 @@ export default function EarlyInterestLanding() {
         </div>
       </section>
 
-      {/* FEATURES */}
-      <section style={{ position: "relative", zIndex: 10, maxWidth: 1200, margin: "0 auto", padding: "64px 24px" }}>
-        <div style={{ textAlign: "center", marginBottom: 40 }}>
-          <div
-            style={{
-              fontSize: "0.65rem",
-              fontWeight: 800,
-              textTransform: "uppercase",
-              letterSpacing: "0.18em",
-              color: theme.accent,
-              marginBottom: 6,
-              transition: "color 0.3s ease",
-            }}
-          >
-            Platform
-          </div>
-          <h2
-            style={{
-              fontSize: "clamp(2.1rem, 4.3vw, 3.1rem)",
-              fontWeight: 900,
-              letterSpacing: "-0.032em",
-              margin: "8px 0 12px",
-              color: "#0f1710",
-            }}
-          >
-            Everything you need
-          </h2>
-          <p style={{ color: "#4b5563", fontSize: "0.9rem", maxWidth: 420, margin: "0 auto", lineHeight: 1.7 }}>
-            Tailored for the paddock.
-          </p>
-        </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
-          <span
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 7,
-              fontSize: "0.62rem",
-              fontWeight: 800,
-              borderRadius: 999,
-              padding: "5px 13px",
-              background: theme.accentSoft,
-              color: theme.accent,
-              border: `1px solid ${theme.accentBorder}`,
-              letterSpacing: "0.08em",
-              textTransform: "uppercase",
-              whiteSpace: "nowrap",
-            }}
-          >
-            <PillIcon size={11} strokeWidth={2} />
-            {c.pillLabel}
-          </span>
-          <span style={{ fontSize: "0.82rem", color: "#4b5563" }}>{c.pillText}</span>
-          <div style={{ flex: 1, minWidth: 40, height: 1, background: "rgba(0,0,0,0.06)" }} />
-        </div>
-        <div className="mc-feat-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 12 }}>
-          {c.cards.map(({ Icon, title, desc }) => (
-            <div
-              key={title}
-              style={{
-                padding: 22,
-                borderRadius: 16,
-                background: "rgba(0,0,0,0.02)",
-                border: "1px solid rgba(0,0,0,0.06)",
-              }}
-            >
-              <div
-                style={{
-                  width: 40,
-                  height: 40,
-                  borderRadius: 10,
-                  background: theme.accentSoft,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginBottom: 14,
-                  color: theme.accent,
-                }}
-              >
-                <Icon size={19} strokeWidth={1.7} />
-              </div>
-              <div style={{ fontWeight: 800, fontSize: "0.85rem", color: "#0f1710", marginBottom: 5 }}>{title}</div>
-              <p style={{ fontSize: "0.77rem", color: "#4b5563", lineHeight: 1.65, margin: 0 }}>{desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* PRICING */}
       <section id="pricing" style={{ position: "relative", zIndex: 10, maxWidth: 1200, margin: "0 auto", padding: "64px 24px" }}>
         <div style={{ textAlign: "center", marginBottom: 48 }}>
@@ -1771,7 +1771,7 @@ const CSS = `
 @keyframes mcmarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 .mc-blink { animation: mcblink 2.2s ease-in-out infinite; }
 .mc-rise { animation: mcrise 0.4s ease both; }
-.mc-marquee { animation: mcmarquee 26s linear infinite; }
+.mc-marquee { animation: mcmarquee 34s linear infinite; }
 .mc-blob1 { animation: mcfloatblob 16s ease-in-out infinite; }
 .mc-blob2 { animation: mcfloatblob 20s ease-in-out infinite reverse; }
 .mc-nav-link:hover { color: var(--accent); }
