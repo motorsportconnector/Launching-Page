@@ -11,6 +11,7 @@ import {
   ChevronRight,
   FileText,
   Gift,
+  Maximize2,
   MessageSquare,
   PlusCircle,
   Search,
@@ -206,6 +207,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 export default function EarlyInterestLanding() {
   const [mode, setMode] = useState("employer");
   const [slide, setSlide] = useState(0);
+  const [expanded, setExpanded] = useState(false); // fullscreen image viewer
   const [email, setEmail] = useState("");
   const [hp, setHp] = useState(""); // honeypot: hidden field only bots fill
   const [role, setRole] = useState("");
@@ -1084,6 +1086,34 @@ export default function EarlyInterestLanding() {
               <button onClick={nextSlide} aria-label="Next" style={arrowBtn("right")}>
                 <ChevronRight size={20} strokeWidth={2.2} />
               </button>
+
+              <button
+                onClick={() => setExpanded(true)}
+                aria-label="Enlarge image"
+                style={{
+                  position: "absolute",
+                  bottom: 10,
+                  right: 10,
+                  zIndex: 5,
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 6,
+                  padding: "6px 11px",
+                  borderRadius: 999,
+                  border: "none",
+                  cursor: "pointer",
+                  background: "rgba(255,255,255,0.92)",
+                  backdropFilter: "blur(6px)",
+                  boxShadow: "0 2px 8px rgba(0,0,0,0.14)",
+                  color: "#0f1710",
+                  fontSize: "0.64rem",
+                  fontWeight: 800,
+                  letterSpacing: "-0.01em",
+                }}
+              >
+                <Maximize2 size={13} strokeWidth={2.4} />
+                Tap to enlarge
+              </button>
             </div>
           </div>
         </div>
@@ -1106,6 +1136,106 @@ export default function EarlyInterestLanding() {
           ))}
         </div>
       </section>
+
+      {/* FULLSCREEN IMAGE VIEWER */}
+      {expanded && (
+        <div
+          onClick={() => setExpanded(false)}
+          role="dialog"
+          aria-label="Enlarged screenshot"
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 10000,
+            background: "rgba(8,12,10,0.92)",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              padding: "14px 18px",
+              color: "#fff",
+              flex: "0 0 auto",
+            }}
+          >
+            <span style={{ fontSize: "0.72rem", fontWeight: 800, letterSpacing: "-0.01em", display: "inline-flex", alignItems: "center", gap: 7 }}>
+              <span style={{ width: 6, height: 6, borderRadius: "50%", background: theme.accent }} />
+              {activeCaption}
+            </span>
+            <button
+              onClick={() => setExpanded(false)}
+              aria-label="Close"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 6,
+                padding: "8px 14px",
+                borderRadius: 999,
+                border: "none",
+                cursor: "pointer",
+                background: "rgba(255,255,255,0.14)",
+                color: "#fff",
+                fontSize: "0.72rem",
+                fontWeight: 800,
+              }}
+            >
+              <X size={15} strokeWidth={2.4} />
+              Close
+            </button>
+          </div>
+
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              flex: "1 1 auto",
+              overflow: "auto",
+              WebkitOverflowScrolling: "touch",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-start",
+              padding: "0 0 12px",
+            }}
+          >
+            <img
+              src={`/assets/${slides[slide]?.src ?? slides[0].src}`}
+              alt={slides[slide]?.alt ?? slides[0].alt}
+              style={{
+                height: "auto",
+                width: "auto",
+                minWidth: "min(1200px, 240vw)",
+                maxWidth: "none",
+                margin: "auto",
+                display: "block",
+                borderRadius: 8,
+              }}
+            />
+          </div>
+
+          <div style={{ flex: "0 0 auto", display: "flex", alignItems: "center", justifyContent: "center", gap: 18, padding: "6px 0 16px" }}>
+            <button
+              onClick={(e) => { e.stopPropagation(); prevSlide(); }}
+              aria-label="Previous"
+              style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 44, height: 44, borderRadius: 999, border: "none", cursor: "pointer", background: "rgba(255,255,255,0.14)", color: "#fff" }}
+            >
+              <ChevronLeft size={22} strokeWidth={2.2} />
+            </button>
+            <span style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.72rem", fontWeight: 700 }}>
+              Swipe the image to see detail · {slide + 1} / {count}
+            </span>
+            <button
+              onClick={(e) => { e.stopPropagation(); nextSlide(); }}
+              aria-label="Next"
+              style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 44, height: 44, borderRadius: 999, border: "none", cursor: "pointer", background: "rgba(255,255,255,0.14)", color: "#fff" }}
+            >
+              <ChevronRight size={22} strokeWidth={2.2} />
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* PROBLEM */}
       <section style={{ position: "relative", zIndex: 10, background: "transparent" }}>
