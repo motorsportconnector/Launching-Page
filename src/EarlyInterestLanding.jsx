@@ -978,8 +978,8 @@ export default function EarlyInterestLanding() {
                   maxWidth: 340,
                 }}
               >
-                Thanks, we've saved your spot as <strong style={{ color: theme.accent }}>{role}</strong>. Watch your
-                inbox; you'll be first to know when we're live.
+                Thank you for registering interest! Keep an eye on your inbox; you'll receive updates and will be the
+                first to know when we're live.
               </p>
             </div>
           )}
