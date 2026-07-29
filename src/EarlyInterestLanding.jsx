@@ -402,7 +402,7 @@ export default function EarlyInterestLanding() {
               <span style={{ color: theme.bannerAccent, display: "inline-flex" }}>
                 <Gift size={14} strokeWidth={2.1} />
               </span>
-              Founding members — register your interest now and get your first month free. Limited early spots.
+              Founding members, register your interest now and get your first month free. Limited early spots.
             </span>
           ))}
         </div>
@@ -936,7 +936,7 @@ export default function EarlyInterestLanding() {
                     letterSpacing: "-0.01em",
                   }}
                 >
-                  Founding members — register your interest now and get your{" "}
+                  Founding members, register your interest now and get your{" "}
                   <span style={{ color: theme.promoIcon }}>first month free</span>. Limited early spots.
                 </span>
               </div>
