@@ -61,7 +61,7 @@ const CONTENT = {
       { src: "c-staff.webp", alt: "Motorsport staff portal to manage race team crew", caption: "Staff Portal" },
       { src: "c-calendar.webp", alt: "Employer calendar for planning motorsport race weekends", caption: "Employer Calendar" },
       { src: "c-discover.webp", alt: "Discover freelance and permanent motorsport staff", caption: "Freelancer & Employee Discovery" },
-      { src: "c-permanent.webp", alt: "Permanent motorsport jobs — full and part time roles", caption: "Full/Part Time Roles" },
+      { src: "c-permanent.webp", alt: "Permanent motorsport jobs, full and part time roles", caption: "Full/Part Time Roles" },
       { src: "c-freelance.webp", alt: "Freelance motorsport jobs for race weekend contracts", caption: "Freelance Roles" },
     ],
     painLead:
@@ -115,7 +115,7 @@ const CONTENT = {
     ],
     faqSub: "For employers.",
     faqs: [
-      { q: "What does it cost to post a role?", a: "Pricing will be tier based, with a free tier and paid tiers. Full pricing will be announced soon — register your interest now to be the first to know." },
+      { q: "What does it cost to post a role?", a: "Pricing will be tier based, with a free tier and paid tiers. Full pricing will be announced soon. Register your interest now to be the first to know." },
       { q: "How quickly can I fill a gap?", a: "Post a job within 60 seconds and receive applications from available freelancers. You can also send direct offers to freelancers you've previously hired and to your pre-existing team through your custom Staff Portal, where you can manage your crew." },
       { q: "I'm the parent of a driver - can I use this?", a: "Absolutely. Anyone can search the network and book the right person directly, whether you are a team, a business or a parent supporting a young driver." },
       { q: "Do you take commission on bookings?", a: "No. Pay is agreed and handled directly between you and the freelancer or employee. We never take a cut." },
@@ -135,7 +135,7 @@ const CONTENT = {
     slides: [
       { src: "c-con-home2.webp", alt: "Motorsport freelancer dashboard and profile", caption: "Your Dashboard" },
       { src: "c-con-freelance.webp", alt: "Freelance motorsport jobs and race weekend contracts", caption: "Freelance Jobs" },
-      { src: "c-con-permanent.webp", alt: "Permanent motorsport jobs — full and part time roles", caption: "Full/Part Time Roles" },
+      { src: "c-con-permanent.webp", alt: "Permanent motorsport jobs, full and part time roles", caption: "Full/Part Time Roles" },
       { src: "c-con-teams-nb.webp", alt: "Motorsport freelancer team and booking management", caption: "My Teams" },
     ],
     painLead:
@@ -189,7 +189,7 @@ const CONTENT = {
     ],
     faqSub: "For freelancers and employees.",
     faqs: [
-      { q: "What does it cost to join?", a: "Pricing will be tier based, with a free tier and paid tiers. Full pricing will be announced soon — register your interest now to be the first to know." },
+      { q: "What does it cost to join?", a: "Pricing will be tier based, with a free tier and paid tiers. Full pricing will be announced soon. Register your interest now to be the first to know." },
       { q: "How do employers find me?", a: "Your profile holds your CV, experience and live availability, so employers can find you and send direct offers before a role is even advertised. You can also apply to unlimited jobs to widen your network." },
       { q: "What kind of work is on here?", a: "There is a freelance marketplace for one-off jobs or race weekend contracts, alongside the permanent jobs marketplace where you can find full / part time jobs, both featuring roles across every area of motorsport." },
       { q: "Do you take a cut of what I earn?", a: "No. Your pay is agreed directly with the employer. We never take a cut." },
@@ -1499,7 +1499,7 @@ export default function EarlyInterestLanding() {
                 letterSpacing: "-0.01em",
               }}
             >
-              Tier based pricing, built to be competitive and fair. Full pricing will be announced soon — register your interest to be the first to know.
+              Tier based pricing, built to be competitive and fair. Full pricing will be announced soon. Register your interest to be the first to know.
             </p>
           </div>
           {false && c.pricing.map((p) => (
@@ -1575,7 +1575,7 @@ export default function EarlyInterestLanding() {
                   }}
                 >
                   <Gift size={14} strokeWidth={2.2} style={{ flexShrink: 0 }} />
-                  Founding offer — first month free
+                  Founding offer, first month free
                 </div>
               )}
               <div
