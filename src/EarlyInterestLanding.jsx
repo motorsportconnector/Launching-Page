@@ -726,7 +726,7 @@ export default function EarlyInterestLanding() {
                   transition: "color 0.3s ease",
                 }}
               >
-                Be part of what's next, register below
+                Be a part of what's next
               </div>
               <div
                 style={{
