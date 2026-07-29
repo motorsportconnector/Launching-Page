@@ -563,7 +563,7 @@ export default function EarlyInterestLanding() {
         >
           <button onClick={() => switchMode("employer")} style={{ ...tabBase, ...(isEmp ? selStyle : offStyle) }}>
             <Building2 size={13} strokeWidth={2} />
-            I'm an employer
+            I'm an Employer
           </button>
           <button onClick={() => switchMode("contractor")} style={{ ...tabBase, ...(!isEmp ? selStyle : offStyle) }}>
             <User size={13} strokeWidth={2} />
