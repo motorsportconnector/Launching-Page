@@ -41,7 +41,7 @@ export default function CookieBanner() {
         Cookies and your privacy
       </div>
       <p style={{ fontSize: "0.82rem", color: "#374151", lineHeight: 1.55, margin: "0 0 12px" }}>
-        We use only essential storage to make this site work and remember your cookie choice. We don't use tracking or advertising cookies — only privacy-friendly, cookieless analytics to count visits. See our{" "}
+        We use only essential storage to make this site work and remember your cookie choice. We don't use tracking or advertising cookies, only privacy-friendly, cookieless analytics to count visits. See our{" "}
         <a href="/privacy.html" target="_blank" rel="noopener noreferrer" style={{ color: "#0b5d4f", fontWeight: 700 }}>Privacy Notice</a>{" "}
         for how we handle any details you share.
       </p>
@@ -50,8 +50,8 @@ export default function CookieBanner() {
         <div style={{ background: "#f9fafb", borderRadius: 10, padding: "12px 14px", marginBottom: 12, fontSize: "0.8rem", color: "#374151", lineHeight: 1.55 }}>
           <div style={{ fontWeight: 700, marginBottom: 6 }}>What we store</div>
           <ul style={{ margin: "0 0 8px", paddingLeft: 18 }}>
-            <li><strong>Essential storage (always on):</strong> remembers your cookie choice, and — if you register your interest — keeps a copy of your submission in your own browser.</li>
-            <li><strong>Analytics:</strong> privacy-friendly and cookieless — aggregate visit counts only, no personal tracking.</li>
+            <li><strong>Essential storage (always on):</strong> remembers your cookie choice, and, if you register your interest, keeps a copy of your submission in your own browser.</li>
+            <li><strong>Analytics:</strong> privacy-friendly and cookieless, aggregate visit counts only, no personal tracking.</li>
             <li><strong>Marketing or advertising:</strong> none.</li>
             <li><strong>Third-party cookies:</strong> none.</li>
           </ul>
