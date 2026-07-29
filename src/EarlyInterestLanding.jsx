@@ -1485,9 +1485,6 @@ export default function EarlyInterestLanding() {
               transition: "background 0.4s ease, border-color 0.4s ease",
             }}
           >
-            <div style={{ color: theme.accent, display: "inline-flex", marginBottom: 12 }}>
-              <Gift size={26} strokeWidth={2} />
-            </div>
             <p
               style={{
                 fontSize: "1.05rem",
@@ -1498,7 +1495,7 @@ export default function EarlyInterestLanding() {
                 letterSpacing: "-0.01em",
               }}
             >
-              Pricing will be tier based. We will be announcing prices soon!
+              Tier based pricing, built to be competitive and fair. Full pricing will be announced soon — register your interest to be the first to know.
             </p>
           </div>
           {false && c.pricing.map((p) => (
